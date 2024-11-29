@@ -6,7 +6,7 @@ function Body() {
 
   return (
     <div className='body'>
-      <Submenu/>
+      {/* <Submenu/> */}
     </div>
   )
 }

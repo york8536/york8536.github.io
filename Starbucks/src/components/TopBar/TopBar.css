@@ -1,11 +1,4 @@
-body {
-    color: black; /* 設定文字顏色 */
-    display: flex; /* 使用 flex 佈局 */
-    flex-direction: column; /* 子元素排列方式為垂直向 */
-    justify-content: top; /* 子元素置頂 */
-    height: 106px;
 
-}
 
 .header_container {
     background-color: #006341; /* 設定背景顏色 */

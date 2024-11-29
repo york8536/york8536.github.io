@@ -1,12 +1,12 @@
-import { useState } from "react";
 import "./TopBar_blank.css";
 
 function TopBar_blank() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  // 可以使用css, 效能較佳
+  /* const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   // 切換懸停的索引，使用 toggle 的方式
   const handleMouseToggle = (index: number | null): void => {
     setHoveredIndex(prevIndex => (prevIndex === index ? null : index)); // 如果是同一個索引就隱藏，否則顯示
-  };
+  }; */
   // 定義列表名稱
 
   const menuItems: { name: string, subItems: string[] }[]= [
@@ -20,46 +20,25 @@ function TopBar_blank() {
   ];
 
   return (
-    <ul className="blank">
-{menuItems.map((item, index) => (
-            <li
-              key={index}
-              onMouseEnter={() => handleMouseToggle(index)}  // 使用 toggle 處理懸停顯示
-              onMouseLeave={() => handleMouseToggle(null)}   // 滑鼠離開時隱藏下拉選單
-              style={{
-                backgroundColor: hoveredIndex === index ? '#000' : 'transparent', // 懸停項目背景顏色變黑
-                color: hoveredIndex === index ? '#fff' : '#000',  // 懸停項目文字顏色變白
-                position: 'relative',  // 使下拉選單相對於 li 定位
-              }}
-            >
-              {item.name}
-              {/* 顯示對應的下拉選單 */}
-              {hoveredIndex === index && (
-                <ul
-                style={{
-                    position: 'absolute',
-                    top: '100%',
-                    left: 0,
-                    backgroundColor: '#000', // 下拉選單的背景顏色設定為白色
-                    color: '#fff',  // 確保下拉選單文字顏色與背景有對比
-                    listStyleType: 'none',
-                    padding: '10px',
-                    margin: 0,
-                    width: '100vw',
-                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                    zIndex: 10, // 確保下拉選單層級高於其他元素
-                  }}
-                >
-                  {item.subItems.map((subItem, subIndex) => (
-                    <li key={subIndex} style={{ padding: '8px', cursor: 'pointer' }}>
-                      {subItem}
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-    </ul>
+    <nav className="navbar">
+      {menuItems.map((item, index) => (
+        <div key={index} className="dropdown">
+          <button className="dropdown-btn">{item.name}</button>
+          <div className="dropdown-content">
+            <div className="row">
+              {item.subItems.map((subItem, subIndex) => (
+                <div key={subIndex} className="column">
+                  <h3>{subItem}</h3>
+                  <a href="#">{`${subItem}1`}</a>
+                  <a href="#">{`${subItem}2`}</a>
+                  <a href="#">{`${subItem}3`}</a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+	  </nav>
   );
 }
 

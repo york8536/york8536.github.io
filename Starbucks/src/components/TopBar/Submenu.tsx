@@ -15,8 +15,7 @@ function Submenu() {
       <div className="menu_content">
         {menuItems.map((item, index) => (
             <li key={index}>
-                {item.name}
-                
+              {item.name}
             </li>
         ))}
         <div className="sp"></div>

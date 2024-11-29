@@ -1,3 +1,111 @@
 .blank {
     margin-top: auto;        /* 自動推動文字到底部 */
 }
+
+.blank li {
+  position: relative;
+}
+
+/* 多使用css pseudo-class, 效能較佳 */
+.blank li:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+.blank li:hover .submenu {  /* 當懸停時顯示子菜單 */
+  display: block;  /* 顯示子菜單 */
+}
+
+.submenu {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  list-style-type: none;
+  padding: 10px;
+  margin: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.submenu li {
+    padding: 8px;
+    cursor: pointer;
+    display: flex;  
+}
+
+.navbar {
+	overflow: hidden;
+  margin-top: auto; 
+}
+.navbar a {
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+.dropdown .dropdown-btn {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: #000;
+	padding: 14px 16px;
+	background: inherit;
+	text-transform: uppercase;
+}
+.navbar a:hover, .dropdown:hover .dropdown-btn {
+  background-color: #000;
+  color: #fff;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background: #000;
+	width: 100%;
+	left: 0;
+	z-index: 10;
+  padding: 20px 40px;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+.column {
+	float: left;
+	width: 100%;
+	padding: 10px;
+	background-color: #000;
+	height: 250px;
+}
+.column a {
+	display: block;
+	float: none;
+  color: #fff;
+	text-align: left;
+}
+.column h3 {
+	color: #eee;
+	padding: 10px;
+}
+.column a:hover {
+	color: #fff;
+	background: #373737;
+}
+.row:after {
+	content: '';
+	display: table;
+	clear: both;
+}
