@@ -1,0 +1,5 @@
+* {
+  padding: 0; /* 重置內邊距 */
+  margin: 0; /* 重置外邊距 */
+  box-sizing: border-box; /* 包括邊框和內邊距在內的元素尺寸計算 */
+}
