@@ -32,21 +32,36 @@
     position: absolute; /* 與父元素位置脫離關係 */
     left: 0;
     width: 100%;
+    
 }
 
 .row {
     margin: 20px 10px 20px 80px;
     display: flex;       /* 設置父元素為 flex 布局 */
-    flex-direction: row; /* 設置子元素垂直排列 */
-    
+    flex-direction: row; /* 設置子元素垂直排列 */  
+    flex-wrap: wrap; /* 當空間不夠時，子元素會換行 */  
+    width: 75%;
 }
+.blank {
+    width: 25%;
+    background-color:#313131ef;
+}
+
 
 .column {
     display: flex;       /* 設置父元素為 flex 布局 */
     flex-direction: column; /* 設置子元素垂直排列 */
+    margin: 15px;
+    width: 200px;
 }
 
 .column>a {
+    width: 150px;
+    margin-bottom: 6px;
+}
+a:visited, a:link {
+    color: #ffffffce;
+    text-decoration: none; /* 去除底線 */
     width: 150px;
     margin-bottom: 6px;
 }
@@ -57,5 +72,5 @@
   }
 
 .dropdown:hover .dropdown-content {
-	display: block;
+	display: flex;
 }

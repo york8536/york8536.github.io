@@ -10,8 +10,8 @@ function TopBar() {
           <a className="logo">logo</a>
           <Navbar />
           <ul className="utility_list">
-            <li>夥伴招募</li>
-            <li>門市查詢</li>
+            <a href="#">夥伴招募</a>
+            <a href="#">門市查詢</a>
           </ul>
         </div>
       </div>

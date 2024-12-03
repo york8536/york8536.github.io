@@ -1,49 +1,54 @@
 body {
-    color: black; /* 設定文字顏色 */
-    display: flex; /* 使用 flex 佈局 */
-    flex-direction: column; /* 子元素排列方式為垂直向 */
-    justify-content: top; /* 子元素置頂 */
-    height: 106px;
-
+  color: black; /* 設定文字顏色 */
+  display: flex; /* 使用 flex 佈局 */
+  flex-direction: column; /* 子元素排列方式為垂直向 */
+  justify-content: top; /* 子元素置頂 */
+  height: 106px;
 }
 
 .header_container {
-    background-color: #006341; /* 設定背景顏色 */
-    height: 106px;
-    display: flex;            /* 使用Flexbox */
-    flex-direction: column;   /* 垂直排列子元素 */
-    justify-content: flex-end; /* 將子元素對齊到底部 */
+  background-color: #006341; /* 設定背景顏色 */
+  height: 106px;
+  display: flex; /* 使用Flexbox */
+  flex-direction: column; /* 垂直排列子元素 */
+  justify-content: flex-end; /* 將子元素對齊到底部 */
 }
 
 .container {
-    background-color: white; /* 設定背景顏色 */
-    height: 96px;
-    display: flex;            /* 使用Flexbox */
-    flex-direction: row;   /* 垂直排列子元素 */
+  background-color: white; /* 設定背景顏色 */
+  height: 96px;
+  display: flex; /* 使用Flexbox */
+  flex-direction: row; /* 垂直排列子元素 */
 }
 
 .logo {
-    height: 62px;
-    width: 62px;
-    background-color: #006341;
-    justify-content: center;  /* 水平方向居中 */
-    align-items: center;      /* 垂直方向居中 */
-    margin: 15px 22px;
+  height: 62px;
+  width: 62px;
+  background-color: #006341;
+  justify-content: center; /* 水平方向居中 */
+  align-items: center; /* 垂直方向居中 */
+  margin: 15px 22px;
 }
 
 .utility_list {
-    display: flex;            /* 使用Flexbox */
-    margin-left: auto;         /* 這行讓 .utility_list 置右 */
+  display: flex; /* 使用Flexbox */
+  margin-left: auto; /* 這行讓 .utility_list 置右 */
+  margin-bottom: auto; /* 這行讓 .utility_list 置右 */
 }
-
 
 ul {
-    display: flex; /* 使用 flex 佈局 */
-    margin: 0;
-    padding: 0;
+  display: flex; /* 使用 flex 佈局 */
+  margin: 0;
+  padding: 0;
 }
-li {
-    list-style-type: none;  /* 移除列表項前的黑點 */
-    padding: 15px 15px 18px;
-    font-weight: 700;
+
+.utility_list > a {
+  color: black;
+  padding: 15px;
+  font-weight: 550;
+  width: 96px;
+}
+
+.utility_list > a:hover {
+  color: #313131de;
 }

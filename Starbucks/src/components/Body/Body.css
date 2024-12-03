@@ -1,4 +1,51 @@
-.body {
-    height: 3000px;
-    background-color: rgb(110, 109, 109);
+@keyframes Gradient {
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+.wrapIndex {
+  display: flex;
+  flex-direction: column; /* 主軸設為垂直方向 */
+  background-image: url("https://www.starbucks.com.tw/home/objects/images/241102/bg.jpg");
+  background-size: cover;
+  /* position: fixed; 打開會看不見下拉欄位*/
+  /* animation: Gradient 48s linear infinite; */
+  height: 100vh;
+  width: 100%;
+}
+
+.banner_top_box {
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  flex: 1;
+
+}
+
+.banner_top_box > a {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    height: auto; /* 根據寬度調整高度 */
+    width: 95%;
+}
+
+.banner_top_box > a > img{
+  height: auto; /* 根據寬度調整高度 */
+  width: 95%;
+  object-fit: contain;
+}
+
+.banner_slide_box {
+  display: flex;
+  flex: 1;
+}
+
+.banner_rewards {
+  display: flex;
+  flex: 1;
 }
