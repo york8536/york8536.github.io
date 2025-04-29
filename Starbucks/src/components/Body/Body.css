@@ -7,23 +7,42 @@
     background-position: 100% 100%;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+}
 
-.wrapIndex {
+.wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+.index {
+  padding-top: 48px;
+  
+}
+
+.index::before {
+  position: fixed ;
+  content: '';
   display: flex;
-  flex-direction: column; /* 主軸設為垂直方向 */
-  background-image: url("https://www.starbucks.com.tw/home/objects/images/241102/bg.jpg");
-  background-size: cover;
-  /* position: fixed; 打開會看不見下拉欄位*/
-  /* animation: Gradient 48s linear infinite; */
   height: 100vh;
   width: 100%;
+  top: 0;
+  background: url(https://www.starbucks.com.tw/home/objects/images/241102/bg.jpg) 0% 0%;
+  background-size: auto 120%;
+  pointer-events: none;
+  animation: Gradient 48s linear infinite;
+  flex-direction: column; 
+  background-size: cover;
 }
 
 .banner_top_box {
   display: flex;
   justify-content: center; /* 水平置中 */
-  flex: 1;
-
+  margin-bottom: 80px;
 }
 
 .banner_top_box > a {
@@ -41,11 +60,9 @@
 }
 
 .banner_slide_box {
-  display: flex;
-  flex: 1;
+  margin-bottom: 80px;
 }
 
-.banner_rewards {
-  display: flex;
-  flex: 1;
+.slickTrack {
+  width: 100%;
 }
