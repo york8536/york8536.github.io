@@ -24,8 +24,8 @@
   
 }
 
-.index::before {
-  position: fixed ;
+/* .index::before {
+  position: fixed;
   content: '';
   display: flex;
   height: 100vh;
@@ -35,9 +35,16 @@
   background-size: auto 120%;
   pointer-events: none;
   animation: Gradient 48s linear infinite;
-  flex-direction: column; 
+  flex-direction: column;
   background-size: cover;
+  z-index: 0;
+} */
+.index {
+  background: url(https://www.starbucks.com.tw/home/objects/images/241102/bg.jpg) 0% 0%;
+  background-size: cover;
+  animation: Gradient 48s linear infinite;
 }
+
 
 .banner_top_box {
   display: flex;

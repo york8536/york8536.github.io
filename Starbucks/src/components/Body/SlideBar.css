@@ -45,5 +45,7 @@
     overflow: hidden;
     margin: 0;
     padding: 0 50;
+    width: 100%;
+    height: 500px; /* 建議設固定高度試試 */
   }
   
